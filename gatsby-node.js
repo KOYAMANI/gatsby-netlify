@@ -10,21 +10,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          nodes {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-            }
+    {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+      ) {
+        nodes {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
           }
         }
       }
+    }
     `
   )
 
@@ -48,10 +48,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const next = index === 0 ? null : posts[index - 1]
 
       createPage({
-        path: post.fields.slug,
+        path: post.fields.slug + "test",
         component: blogPost,
         context: {
           slug: post.fields.slug,
+          // readingTime: post.node.fields.readingTime.text,
           previous,
           next,
         },
