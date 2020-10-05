@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Coding Blog`,
+    title: `ベルリンでエンジニアを目指す`,
     author: {
       name: `Yutaro Koyama`,
       summary: `a blog for learning code.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://yutaro-log.netlify.app/`,
     social: {
-      twitter: `@koyamani1114`,
+      // twitter: `@koyamani1114`,
     },
   },
   plugins: [
@@ -67,7 +67,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/gatsby-donpatch.jpeg`,
       },
     },
     `gatsby-plugin-react-helmet`,
