@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `ベルリンでエンジニアを目指す`,
     author: {
-      name: `Yutaro Koyama`,
+      name: `YUTARO`,
       summary: `a blog for learning code.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
@@ -67,7 +67,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/donpatch.jpeg`,
+        icon: `content/assets/thesun.jpg`,
       },
     },
     `gatsby-plugin-react-helmet`,
