@@ -14,7 +14,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/thesun.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50, quality: 95) {
+          fixed(width: 72, height: 72, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -54,7 +54,7 @@ const Bio = () => {
       {author?.name && (
         <p>
           <strong>{author.name}</strong>  
-          留学生＠CODE University of Applied Science。
+          <br></br>留学生＠CODE University of Applied Science
           {/* {author?.summary || null} */}
           {` `}
           {/* <a href={`https://twitter.com/${social?.twitter || ``}`}>

@@ -4,11 +4,13 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Share from "../components/share"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = pageContext
+  const url = data.site.siteMetadata.siteUrl
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -31,6 +33,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         />
         <hr />
         <footer>
+          <Share
+              socialConfig={{
+                config: {
+                  url: `${url}${post.frontmatter.slug}`,
+                  title: post.frontmatter.title,
+                },
+              }}
+              tags={post.frontmatter.tags}
+          />
+          <br></br>
           <Bio />
         </footer>
       </article>

@@ -10,3 +10,6 @@ import "./src/style.css"
 import "prismjs/themes/prism.css"
 
 import "./src/styles/global.css"
+
+// // shape of the sharingbutton
+// import 'react-sharingbuttons/dist/main.css'
