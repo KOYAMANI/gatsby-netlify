@@ -9,8 +9,7 @@ import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  
-  // let featuredImgFluid = post.frontmatter.thumbnail.childImageSharp.fluid
+  let thumbnail = post.frontmatter.thumbnail.childImageSharp.fluid
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
   // const siteUrl = data.site.siteMetadata.siteUrl;
@@ -30,7 +29,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          {/* <Img fluid={featuredImgFluid} /> */}
+          <Img fluid={thumbnail} />
           <p>{post.frontmatter.date}</p>
         </header>
         <section
@@ -59,14 +58,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={previous.fields.slug + "test"} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.fields.slug + "test"} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -94,6 +93,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
