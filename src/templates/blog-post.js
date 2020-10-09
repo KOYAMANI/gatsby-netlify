@@ -9,7 +9,7 @@ import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  // const thumbnailFluid = post.frontmatter.thumbnail.childImageSharp.fluid
+  const thumbnailIFluid = post.frontmatter.thumbnail.childImageSharp.fluid
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
   // const siteUrl = data.site.siteMetadata.siteUrl;
@@ -29,8 +29,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <Img fluid={post.frontmatter.thumbnail.childImageSharp.fluid} />
           <p>{post.frontmatter.date}</p>
+          <Img fluid={thumbnailIFluid} />
+          <br></br>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
