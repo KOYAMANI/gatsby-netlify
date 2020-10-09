@@ -26,6 +26,14 @@ module.exports = {
         name: `assets`,
       },
     },
+    // for thumbnails
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/pages`,
+    //   },
+    // },
+    // until here
     {
       resolve: `gatsby-transformer-remark`,
       options: {

@@ -5,9 +5,13 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Share from "../components/share"
+import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
+  let post = data.markdownRemark
+  
+  let featuredImgFluid = post.frontmatter.thumbnail.childImageSharp.fluid
+
   const siteTitle = data.site.siteMetadata?.title || `Title`
   // const siteUrl = data.site.siteMetadata.siteUrl;
   const siteUrl = `https://yutaro-log.netlify.app`;
@@ -26,6 +30,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <Img fluid={featuredImgFluid} />
           <p>{post.frontmatter.date}</p>
         </header>
         <section
@@ -39,16 +44,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           description={post.excerpt}
         />
         <footer>
-          {/* <Share
-              socialConfig={{
-                config: {
-                  url: `${url}${post.frontmatter.slug}`,
-                  title: post.frontmatter.title,
-                },
-              }}
-              tags={post.frontmatter.tags}
-          /> */}
-          <br></br>
           <Bio />
         </footer>
       </article>
@@ -99,6 +94,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
