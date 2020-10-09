@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link } from "gatsby" 
 // import Header from '../components/header/header.js';
 
 const Layout = ({ location, title, children }) => {
@@ -35,3 +35,11 @@ const Layout = ({ location, title, children }) => {
 }
 
 export default Layout
+// export default ({ children }) => (
+//   <div className="page-root">
+//       <Header />
+//       <div className="page-body">
+//           {children}
+//       </div>
+//   </div>
+// )
