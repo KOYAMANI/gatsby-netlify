@@ -72,7 +72,11 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
+<<<<<<< HEAD
     // `gatsby-plugin-sitemap`
+=======
+    //`gatsby-plugin-sitemap`
+>>>>>>> d7d2dc2527dd3e8c784ae8c7498244a64f17c803
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
