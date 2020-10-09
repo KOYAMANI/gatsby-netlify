@@ -8,9 +8,9 @@ import Share from "../components/share"
 import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  let post = data.markdownRemark
+  const post = data.markdownRemark
   
-  let featuredImgFluid = post.frontmatter.thumbnail.childImageSharp.fluid
+  // let featuredImgFluid = post.frontmatter.thumbnail.childImageSharp.fluid
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
   // const siteUrl = data.site.siteMetadata.siteUrl;
@@ -30,7 +30,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <Img fluid={featuredImgFluid} />
+          {/* <Img fluid={featuredImgFluid} /> */}
           <p>{post.frontmatter.date}</p>
         </header>
         <section
@@ -94,11 +94,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        thumbnail {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
           }
         }
       }
