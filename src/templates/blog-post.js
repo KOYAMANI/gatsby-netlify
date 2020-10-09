@@ -9,9 +9,8 @@ import Share from "../components/share"
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  // const { previous, next } = pageContext
-  const url = data.site.siteMetadata.siteUrl
   // const siteUrl = data.site.siteMetadata.siteUrl;
+  const siteUrl = `https://yutaro-log.netlify.app`;
   const { slug, previous, next } = pageContext;
 
   return (
@@ -36,7 +35,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <hr />
         <Share
           title={post.frontmatter.title}
-          url={`${url}${slug}`}
+          url={`${siteUrl}${slug}`}
           description={post.excerpt}
         />
         <footer>
