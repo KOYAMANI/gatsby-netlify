@@ -331,3 +331,13 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+/* SNS Share Buttons */
+.social-links {
+  margin-bottom: 40px;
+
+  &__icon {
+    display: inline;
+    margin-right: 10px;
+  }
+}

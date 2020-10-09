@@ -9,8 +9,10 @@ import Share from "../components/share"
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = pageContext
+  // const { previous, next } = pageContext
   const url = data.site.siteMetadata.siteUrl
+  // const siteUrl = data.site.siteMetadata.siteUrl;
+  const { slug, previous, next } = pageContext;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -32,8 +34,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           itemProp="articleBody"
         />
         <hr />
+        <Share
+          title={post.frontmatter.title}
+          url={`${url}${slug}`}
+          description={post.excerpt}
+        />
         <footer>
-          <Share
+          {/* <Share
               socialConfig={{
                 config: {
                   url: `${url}${post.frontmatter.slug}`,
@@ -41,7 +48,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 },
               }}
               tags={post.frontmatter.tags}
-          />
+          /> */}
           <br></br>
           <Bio />
         </footer>
