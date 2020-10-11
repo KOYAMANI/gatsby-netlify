@@ -67,11 +67,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   
     if (node.internal.type === `MarkdownRemark`) {
       const value = createFilePath({ node, getNode })
+      const url = node.frontmatter.url
   
       createNodeField({
         name: `slug`,
         node,
-        value,
+        // value,
+        value: url? url : value
       })
     }
   }
