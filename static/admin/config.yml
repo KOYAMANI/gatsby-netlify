@@ -2,12 +2,12 @@ Copystatic/admin/config.yml: copy code to clipboard
 backend:
   name: github
   repo: KOYAMANI/gatsby-starter-blog
-media_folder: static/assets
+media_folder: content/blog/
 public_folder: /assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: content/blog/
     create: true
     fields:
       # - { name: path, label: Path }
