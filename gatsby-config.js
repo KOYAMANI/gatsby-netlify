@@ -82,7 +82,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/thesun.jpg`,
+        icon: `content/assets/profile.jpg`,
       },
     },
     `gatsby-plugin-react-helmet`,

@@ -12,7 +12,7 @@ import Image from "gatsby-image"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/thesun.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
         childImageSharp {
           fixed(width: 72, height: 72, quality: 100) {
             ...GatsbyImageSharpFixed
@@ -54,7 +54,8 @@ const Bio = () => {
       {author?.name && (
         <p>
           <strong>{author.name}</strong>  
-          <br></br>留学生＠CODE University of Applied Science
+          <br></br>1993年生まれ。関西私大卒→家電メーカー営業→シンガポール駐在→退職
+          <br></br>→(現)CODE University of Applied Science@ベルリン 正規留学生
           {/* {author?.summary || null} */}
           {` `}
           {/* <a href={`https://twitter.com/${social?.twitter || ``}`}>
