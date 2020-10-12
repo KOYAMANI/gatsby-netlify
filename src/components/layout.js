@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby" 
-// import Header from '../components/header/header.js';
+import NavBar from "./navbar"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -22,7 +22,16 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div className="global-wrapper" data-is-root-path={isRootPath} style={{
+      marginLeft: `auto`,
+      marginRight: `auto`,
+      marginTop: 80,
+      // maxWidth: rhythm(30),
+      // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+      backgroundColor: `#fff`, //真ん中
+      boxShadow: `0 0 10px rgba(0,0,0,0.2)`,
+    }}>
+      <NavBar />
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
