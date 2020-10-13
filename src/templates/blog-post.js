@@ -5,11 +5,11 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Share from "../components/share"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const thumbnailIFluid = post.frontmatter.thumbnail.childImageSharp.fluid
+  // const thumbnailIFluid = post.frontmatter.thumbnail.childImageSharp.fluid
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
   // const siteUrl = data.site.siteMetadata.siteUrl;
@@ -30,7 +30,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-          <Img fluid={thumbnailIFluid} />
+          {/* <Img fluid={thumbnailIFluid} /> */}
           <br></br>
         </header>
         <section
@@ -94,14 +94,15 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        thumbnail {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }
 `
+
+// thumbnail {
+//   childImageSharp {
+//     fluid(maxWidth: 800) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }

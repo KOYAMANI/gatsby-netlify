@@ -2,7 +2,7 @@
 title: "My First Post"
 date: "2020-10-12T22:12:03.284Z"
 description: "このブログについて"
-thumbnail: ./helloworld.png
+# thumbnail: ./helloworld.png
 ---
 
 ## 自己発信ってすごい

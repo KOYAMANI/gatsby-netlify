@@ -2,7 +2,7 @@
 title: TEST
 date: "2020-10-09T22:12:03.284Z" 
 description: "テスト投稿"
-thumbnail: ./HelloWorld.png
+# thumbnail: ./HelloWorld.png
 ---
 
 This is my first post on my new fake blog! How exciting!
