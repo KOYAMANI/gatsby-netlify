@@ -17,7 +17,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { slug, previous, next } = pageContext;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}　>
+      {/* title={siteTitle}  */}
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
