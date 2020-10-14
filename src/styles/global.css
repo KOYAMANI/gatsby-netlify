@@ -55,7 +55,7 @@ a {
     color: black;
     padding: 7px 13px;
     padding-bottom: 1px;
-     transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .nabvar__li.a:hover{
     color: red;

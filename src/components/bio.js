@@ -55,7 +55,7 @@ const Bio = () => {
         <p>
           <strong>{author.name}</strong>  
           <br></br>1993年生まれ。関西私大卒→パナソニック国際営業→シンガポール駐在→退職
-          <br></br>→(現)<a href="https://code.berlin/en/">CODE University of Applied Science</a>@ベルリン🇩🇪 留学生
+          →(現)<a href="https://code.berlin/en/">CODE University of Applied Science</a>@ベルリン🇩🇪 留学生
           {/* {author?.summary || null} */}
           {` `}
           {/* <a href={`https://twitter.com/${social?.twitter || ``}`}>
