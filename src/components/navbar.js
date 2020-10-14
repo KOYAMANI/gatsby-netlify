@@ -1,14 +1,24 @@
-import React from "react";
-import { Link } from "gatsby";
-// import "./styles/global.css";
+import React from "react"
+import { Link } from "gatsby"
 
 const NavBar = () => {
+
   return (
     <nav className="navbar">
+      <ul className="navbar__title">
+        {/* <img
+          className="navbar__avatar"
+          src="../content/assets/profile.jpg"
+          alt= "Icon"
+          imgStyle={{
+            borderRadius: `50%`,
+          }}
+        /> */}
+        ベルリンでエンジニアを目指す
+      </ul>
       <ul className="navbar__ul">
         <li className="navbar__li">
             <Link to="/">HOME</Link>
-            {/* <a href="https://www.codecademy.com/">HOME</a> */}
         </li>
         <li className="navbar__li">
             <Link to="/about">ABOUT</Link>
@@ -19,3 +29,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

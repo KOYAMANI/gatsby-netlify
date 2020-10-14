@@ -13,27 +13,6 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
         <Layout location={location} title={siteTitle}>
-        {/* for thumbnails */}
-        {/* <div className="post-list">
-          {posts.map(post => (
-            <div key={post.node.id} className="post-list__item">
-              <div className="post-list__thumbnail">
-                <Link to={post.node.fields.slug}>
-                  <Img
-                    fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
-                  />
-                </Link>
-              </div>
-              <div className="post-list__content">
-                <h2>{post.node.frontmatter.title}</h2>
-                <p>{post.node.frontmatter.date}</p>
-                <div className="post-list__excerpt">{post.node.excerpt}</div>
-                <Link to={post.node.fields.slug}>Read More</Link>
-              </div>
-            </div>
-          ))}
-        </div> */}
-        {/* until here */}
         <SEO title="All posts" />
             <Bio />
             <p>
@@ -97,7 +76,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY/MM/DD")
           title
           description
         }
@@ -105,3 +84,4 @@ export const pageQuery = graphql`
     }
   }
 `
+// "MMMM DD, YYYY"

@@ -13,7 +13,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
   // const siteUrl = data.site.siteMetadata.siteUrl;
-  const siteUrl = `https://yutaro-log.netlify.app`;
+  const siteUrl = `https://yutaro-log.com`;
   const { slug, previous, next } = pageContext;
 
   return (
@@ -92,12 +92,13 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY/MM/DD")
         description
       }
     }
   }
 `
+// date(formatString: "MMMM DD, YYYY")
 
 // thumbnail {
 //   childImageSharp {

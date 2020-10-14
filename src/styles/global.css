@@ -32,6 +32,12 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.navbar__title{
+    float:left;
+    margin-left: 20px;
+    font-weight: bold; 
+}
+
 .navbar__ul {
     float: right;
     margin-right: 20px;
@@ -40,17 +46,18 @@ a {
 
 .navbar__li {
     display: inline-block;
-    line-height: 60px;
+    margin-right: 20px;
+    /* line-height: 60px; */
     margin: 0 5px;
 }
 
-/* // & a{
-//     color: black;
-//     padding: 7px 13px;
-//     padding-bottom: 1px;
-//     transition: all 0.5s ease;
-//     & :hover{
-//         color: red;
-//         transition: 0.5s;           
-//     }
-// } */
+.navbar__li.a{
+    color: black;
+    padding: 7px 13px;
+    padding-bottom: 1px;
+     transition: all 0.5s ease;
+}
+.nabvar__li.a:hover{
+    color: red;
+    transition: 0.5s;           
+}
