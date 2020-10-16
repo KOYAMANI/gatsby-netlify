@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   // const siteUrl = data.site.siteMetadata.siteUrl;
   const siteUrl = `https://yutaro-log.com`;
   const { slug, previous, next } = pageContext;
-  const disqusShortname = "yourdisqusshortname";
+  const disqusShortname = "https-yutaro-log-com";
   const disqusConfig = {
     identifier: post.id,
     title: post.frontmatter.title,
