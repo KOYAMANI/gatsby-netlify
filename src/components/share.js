@@ -10,7 +10,8 @@ import {
 
 const Share = props => {
   const articleTitle = props.title;
-  const articleUrl = props.url + "test";
+  const articleUrl = props.url;
+  // + "test"
   const articleDescription = props.description;
   const iconSize = 32;
 

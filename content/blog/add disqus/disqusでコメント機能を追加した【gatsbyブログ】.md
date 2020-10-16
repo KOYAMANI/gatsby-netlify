@@ -33,7 +33,7 @@ Gatsbyの[公式ドキュメント](https://www.gatsbyjs.com/docs/adding-comment
 
 青枠部分は必須、他はどっちでもいい気がする。
 
-赤枠のShort-nameはあとで必要になるのでメモ。
+赤枠のShortnameはあとで必要になるのでメモ。
 
 ![setting.image](./setting.png)
 
@@ -83,8 +83,9 @@ const disqusShortname = "https-yutaro-log-com";
 
 最初```const disqusShortname ="  "```に参考サイトからコピペしたコードをそのまま入れてたらエラーが出てちょっと悩んだ。
 
-というわけで他にも欲しい機能あったらコメントください。
+あと、それなりにエンジニアっぽい記事が書けてうれしい。
 
+というわけで他にも欲しい機能や要望等あれば是非コメントください。
 
 
 <br></br>おわり
