@@ -54,8 +54,8 @@ import { DiscussionEmbed } from "disqus-react"
 <br></br>**コメント欄の設定**
 
 ```js:blog-post.js
-//---略---
-const disqusShortname = "https-yutaro-log-com";
+//---<略>---
+const disqusShortname = "ここに先ほどのShortnameを入れる";
   const disqusConfig = {
     identifier: post.id,
     title: post.frontmatter.title,

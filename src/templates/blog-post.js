@@ -72,7 +72,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                 {/* + "test" */}
                 ← {previous.frontmatter.title}
               </Link>
             )}
