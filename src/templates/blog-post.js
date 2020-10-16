@@ -5,7 +5,9 @@ import { DiscussionEmbed } from "disqus-react";
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Share from "../components/share"
+//SNS share buttons -NOT using-
+// import Share from "../components/share"
+
 // import Img from "gatsby-image"
 
 
@@ -47,11 +49,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <Share
+        {/* SNS share buttons -NOT using- */}
+        {/* <Share
           title={post.frontmatter.title}
           url={`${siteUrl}${slug}`}
           description={post.excerpt}
-        />
+        /> */}
         <footer>
           <Bio />
         </footer>

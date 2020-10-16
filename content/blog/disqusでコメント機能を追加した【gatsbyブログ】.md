@@ -19,7 +19,7 @@ Gatsbyの[公式ドキュメント](https://www.gatsbyjs.com/docs/adding-comment
 
 詳しくは[これ](https://www.frontendstumbles.com/add-comments-to-a-static-gatsby-blog-with-disqus/)とか[これ](https://qiita.com/atomyah/items/5f602da57b0e756c5864)を参考に。
 
-### <br></br>Disqus導入
+### Disqus導入
 
 [公式サイト](https://disqus.com/)から登録。
 
@@ -27,7 +27,7 @@ Gatsbyの[公式ドキュメント](https://www.gatsbyjs.com/docs/adding-comment
 
 I want to install Disqus on my site を選ぶ
 
-![login-image](/assets/screenshot-2020-10-16-at-10.05.55-am.png "login-image")
+![login-image](/assets/login.png "login-image")
 
 サイト情報の入力
 
@@ -35,7 +35,7 @@ I want to install Disqus on my site を選ぶ
 
 赤枠のShort-nameはあとで必要になるのでメモ
 
-![setting.image](/assets/screenshot-2020-10-16-at-10.06.49-am.png "setting.image")
+![setting.image](/setting.png "setting.image")
 
 ### <br></br>Disqusインストールと設置
 
@@ -47,47 +47,35 @@ I want to install Disqus on my site を選ぶ
 
 <br></br>**disqusプラグインのインポート**
 
-`//blog-post.js`
-
-`import { DiscussionEmbed } from "disqus-react";`
+```js:blog-post.js
+import { DiscussionEmbed } from "disqus-react"
+```
 
 <br></br>**コメント欄の設定**
 
-`//blog-post.js`
-
-`<略>`
-
-`const disqusShortname = "ここに先ほどのShotnameを入れる";`
-
-`const disqusConfig = {`
-
-`identifier: post.id,`
-
-`title: post.frontmatter.title,`
-
-`};`
+```js:blog-post.js
+//---略---
+const disqusShortname = "https-yutaro-log-com";
+  const disqusConfig = {
+    identifier: post.id,
+    title: post.frontmatter.title,
+  }
+```
 
 <br></br>**埋め込み**
 
 普通にページの一番下に置いた。
 
-`//blog-post.js`
-
-`<略>`
-
-`</li>`
-
-`</ul>`
-
-`<DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />`
-
-`</nav>`
-
-`</Layout>`
+```js:blog-post.js
+//---<略>---
+  </ul>
+  <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+</nav>
+```
 
 ### <br></br>できたよ
 
-![commentsection](/assets/screenshot-2020-10-16-at-9.59.03-am.png "commentsection")
+![commentsection](/assets/commentsection.png "commentsection")
 
 
 
