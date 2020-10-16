@@ -1,11 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { DiscussionEmbed } from "disqus-react";
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Share from "../components/share"
 // import Img from "gatsby-image"
+
+
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -15,6 +18,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   // const siteUrl = data.site.siteMetadata.siteUrl;
   const siteUrl = `https://yutaro-log.com`;
   const { slug, previous, next } = pageContext;
+  const disqusShortname = "yourdisqusshortname";
+  const disqusConfig = {
+    identifier: post.id,
+    title: post.frontmatter.title,
+  };
 
   return (
     <Layout location={location}　>
@@ -73,6 +81,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </nav>
     </Layout>
   )
