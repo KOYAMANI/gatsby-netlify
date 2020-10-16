@@ -15,33 +15,33 @@ Gatsbyの[公式ドキュメント](https://www.gatsbyjs.com/docs/adding-comment
 
 
 
-<br></br>以下さっそく簡単な手順。
+<br></br>以下簡単な手順。
 
 詳しくは[これ](https://www.frontendstumbles.com/add-comments-to-a-static-gatsby-blog-with-disqus/)とか[これ](https://qiita.com/atomyah/items/5f602da57b0e756c5864)を参考に。
 
-### Disqus導入
+### <br></br>Disqus導入
 
 [公式サイト](https://disqus.com/)から登録。
 
-登録が終わるとこんな画面
+<br></br>登録が終わるとこんな画面。
 
-I want to install Disqus on my site を選ぶ
+"I want to install Disqus on my site" を選ぶ
 
-![login-image](/assets/login.png "login-image")
+![login-image](./login.png)
 
-サイト情報の入力
+<br></br>**サイト情報の入力**
 
-青枠部分は必須、他はいらない気がする(多分)。
+青枠部分は必須、他はどっちでもいい気がする。
 
-赤枠のShort-nameはあとで必要になるのでメモ
+赤枠のShort-nameはあとで必要になるのでメモ。
 
-![setting.image](/setting.png "setting.image")
+![setting.image](./setting.png)
 
 ### <br></br>Disqusインストールと設置
 
 <br></br>**インストール**
 
-`$ npm install disqus-react`
+```$ npm install disqus-react```
 
 
 
@@ -73,15 +73,15 @@ const disqusShortname = "https-yutaro-log-com";
 </nav>
 ```
 
-### <br></br>できたよ
+### <br></br>できた
 
-![commentsection](/assets/commentsection.png "commentsection")
+![commentsection](./commentsection.png)
 
 
 
 珍しくあまり詰まることはなかったが、
 
-最初`const disqusShortname =""`に参考サイトからコピペしたコードをそのまま入れてたらエラーが出てちょっと悩んだ。
+最初```const disqusShortname ="  "```に参考サイトからコピペしたコードをそのまま入れてたらエラーが出てちょっと悩んだ。
 
 というわけで他にも欲しい機能あったらコメントください。
 

@@ -2,7 +2,7 @@ Copystatic/admin/config.yml: copy code to clipboard
 backend:
   name: github
   repo: KOYAMANI/gatsby-starter-blog
-media_folder: content/blog
+media_folder: /assets
 public_folder: /assets
 collections:
   - name: blog
