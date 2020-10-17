@@ -35,7 +35,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, copyright yutaro-log
+        © {new Date().getFullYear()}, copyright YUTARO on SE
         {/* {` `} */}
         {/* <a href="https://www.gatsbyjs.com">Gatsby</a> */}
       </footer>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `ベルリンでエンジニアを目指す`,
+    title: `YUTARO on SE`,
     author: {
       name: `YUTARO`,
       summary: `a blog for learning code.`,
@@ -19,6 +19,13 @@ module.exports = {
         name: `blog`,
       },
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/blog`,
+    //     name: `blog`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

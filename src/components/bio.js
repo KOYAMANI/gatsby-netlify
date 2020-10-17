@@ -35,7 +35,7 @@ const Bio = () => {
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
-  // const social = data.site.siteMetadata?.social
+  const social = data.site.siteMetadata?.social
 
   const avatar = data?.avatar?.childImageSharp?.fixed
 
@@ -54,13 +54,12 @@ const Bio = () => {
       {author?.name && (
         <p>
           <strong>{author.name}</strong>  
-          <br></br>1993年生まれ。関西私大卒→パナソニック国際営業→シンガポール駐在→退職
-          →(現)<a href="https://code.berlin/en/">CODE University of Applied Science</a>@ベルリン🇩🇪 留学生
+          <br></br>I'm Yutaro, a Software Engineering student at <a href="https://code.berlin/en/">CODE University of Applied Science</a> in Berlin, Germany.
           {/* {author?.summary || null} */}
           {` `}
-          {/* <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter */}
-          {/* </a> */}
+          <br></br><a href={`https://github.com/KOYAMANI${social?.twitter || ``}`}>
+            This is my GitHub
+          </a>
         </p>
       )}
     </div>

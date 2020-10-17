@@ -1,8 +1,8 @@
 ---
 title: "このブログについて"
-url: my-first-post/
+url: my-first-post
 date: "2020-10-12T22:12:03.284Z"
-# description: "このブログについて"
+tags: "Japanese"
 # thumbnail: ./helloworld.png
 ---
 

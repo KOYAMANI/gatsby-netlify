@@ -71,7 +71,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={previous.frontmatter.url} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
@@ -105,7 +105,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "YYYY/MM/DD")
+        date(formatString: "MMMM DD, YYYY")
         description
       }
     }
