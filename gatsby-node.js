@@ -98,7 +98,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         name: `slug`,
         node,
         // value,
-        value: url? url : value
+        value:url || value
+        // value: url? url : value
       })
     }
   }
